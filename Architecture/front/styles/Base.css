@@ -1,0 +1,154 @@
+/* 图片大小 */
+
+.img-xl {
+}
+
+.img-l {}
+
+.img {}
+
+.img-s {}
+
+.img-xs {}
+
+/** Fit image in container
+ * Changes the fit and position of an image within its container while preserving its aspect ratio. Previously only possible using a background image and the background-size property.
+ 
+ > Explanation
+
+ 1. object-fit: contain fits the entire image within the container while preserving its aspect ratio.
+
+ 2. object-fit: cover fills the container with the image while preserving its aspect ratio.
+  
+ 3. object-position: [x] [y] positions the image within the container.
+*/
+.image-contain {
+    object-fit: contain;
+    object-position: center;
+  }
+  .image-cover {
+    object-fit: cover;
+    object-position: right top;
+  }
+
+/* 图标大小 */
+
+.icon-xl {
+}
+
+.icon-l {
+}
+
+.icon {
+}
+
+.icon-s {
+}
+
+.icon-xs {
+}
+
+
+/* 按钮大小 */
+
+.badge {
+}
+
+
+/* 按钮大小 */
+
+.btn-xl {
+}
+
+.btn-l {
+}
+
+.btn {
+}
+
+.btn-s {
+
+}
+
+.btn-xs {
+}
+
+
+/* 字体大小 */
+
+.size-xl {}
+
+.size-l {}
+
+.size {}
+
+.size-s {}
+
+.size-xs {}
+
+/* 定义 */
+.dfn {
+
+}
+
+/* 样本 */
+.samp {
+
+}
+
+/* 引用 */
+.cite {
+
+}
+
+/* 地址 */
+.address {
+
+}
+
+/* 时间 */
+.time {
+
+}
+
+/* 代码 */
+.code {
+
+}
+
+/* 按键 */
+.kbd {
+
+}
+
+/* 预排 */
+.prev {
+
+}
+
+/* 注释 */
+.note {}
+
+/* 对话框 */
+.dialog {}
+
+/* 提示 */
+.tip {
+
+}
+
+/* 缩写 */
+.abbr {
+
+}
+
+/* 数字 */
+.digit {
+
+}
+
+/* 术语 */
+.term {}
+
+/* 数字 */
+.symbol {}
