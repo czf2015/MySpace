@@ -1,4 +1,5 @@
 > Mongoose Cheatsheet
+
 1. Find all users:
 
 ```js
