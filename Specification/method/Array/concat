@@ -1,0 +1,4 @@
+//array.concat(...item)：产生一个新数组，包含一份array的浅复制，并把一个或多个参数item依次添加在其后。
+$ a : ["a", "b", "c"]
+$ b : ["x", "y", "z"]
+$ c : a.concat(b, true)//["a", "b", "c", "x", "y", "z", true]

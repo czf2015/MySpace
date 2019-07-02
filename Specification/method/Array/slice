@@ -1,0 +1,5 @@
+//array.slice(start : 0, end : array.length)：从start到end复制元素。如果两个参数中的任何一个是负数，与array.length相加使之成为非负数。
+$ a : ["a", "b", "c"]
+$ b : a.slice()//["a", "b", "c"]
+$ c : a.slice(1)//["b", "c"]
+$ d : a.slice(1, -1)//["b"]

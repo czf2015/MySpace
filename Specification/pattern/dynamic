@@ -1,0 +1,24 @@
+- 示例:
+
+```js
+//构造函数在不返回值的情况下，默认会返回新对象实例。
+# Person(name, age, job) {
+//属性
+	this.name : name
+	this.age : age
+	this.job : job
+
+//方法
+  if typeof this.sayName != "function" {
+		Person.prototype.sayName : # () {
+		  alert(this.name)
+		}
+	}
+}
+
+$ person1 : new Person("Nicholas", 29, "Software Engineer")
+person1.sayName()
+```
+
+> 说明：
+使用动态原型模式时，不能使用对象字面量重写原型。如果在已经创建了实例的情况下重写原型，那么就会切断现有实例与新原型之间的联系。

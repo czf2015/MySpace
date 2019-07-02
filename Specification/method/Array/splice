@@ -1,0 +1,4 @@
+//array.splice(start, deletCount, ...item)：从array中移除一个或多个元素，并用新的item替换它们。
+$ a : ["a", "b", "c"]
+$ b : a.splice(1, 1, "ache", "bug")
+//a = ["a", "ache", "bug", "c"], b = ["b"]

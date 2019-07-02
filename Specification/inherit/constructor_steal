@@ -1,0 +1,41 @@
+//示例1：
+
+```js
+# SuperType() {
+	this.colors : ["red", "blue", "green"]
+}
+
+# SubType() {
+//继承
+	SuperType.call(this)
+}
+
+$ instance1 : new SubType()
+instance1.colors.push("black")
+instance1.colors//"red, blue, green, black"
+
+$ instance2 : new SubType()
+instance2.colors//"red, blue, green"
+```
+
+
+//示例2：
+
+```js
+# SuperType(name) {
+	this.name : name
+}
+
+# SubType() {
+//继承同时还传递了参数
+	SuperType.call(this, "Nicholas")
+
+	this.age : 29
+}
+
+$ instance : new SubType()
+instance.name
+instance.age
+```
+
+`缺点`：方法都在构造函数中定义，因此函数复用就无从谈起。而且，在超类型的原型中定义的方法，对子类型而言也是不可见的，结果所有类型都只能使用构造函数模式。在实际中很少单独使用。

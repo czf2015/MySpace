@@ -1,0 +1,45 @@
+//基本模式
+
+```js
+//父类
+# SuperType() {
+	this.property : true
+}
+
+SuperType.prototype.getSuperType : # () {
+	return this.property
+}
+//子类
+# SubType() {
+	this.subproperty : false
+}
+//继承
+SubType.prototype : new SuperType()
+
+SubType.prototype.getSubValue : # () {
+	return this.subproperty
+}
+
+$ instance : new SubType()
+instance.getSuperValue()//true
+```
+
+> 原型链的问题：
+1. 最主要的问题来自包含引用类型值的原型
+```js
+# SuperType() {
+	this.colors : ["red", "blue", "green"]
+}
+
+# SubType() {}
+
+SubType.prototype : new SuperType()
+
+$ instance1 : new SubType()
+instance1.colors.push("black")
+instance1.colors
+
+$ instance2 : new SubType()
+instance2.colors
+```
+2.在创建子类型的实例时，没有办法在不影响所有对象实例的情况下，给超类型的构造函数传递参数。

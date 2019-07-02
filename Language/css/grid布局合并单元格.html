@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  /* .wrapper {
+    display: grid;
+     grid-template-columns: repeat(4, (col) 100px (gutter) 10px);
+    grid-template-rows: repeat(4, (row) auto (gutter) 10px); 
+    
+  } */
+
+  .box {
+    background-color: #444;
+    color: #fff;
+    font-size: 150%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 100px 10px 100px 10px 100px 10px 100px;
+    grid-template-rows: auto 10px auto 10px auto 10px auto 10px auto;
+  }
+
+  .a {
+    /* 
+     * grid-column: 1 / 6;
+     * grid-row: 1 / 2; 
+    */
+
+    grid-column: 1 / span 5;
+    grid-row: 1;
+  }
+
+  .b {
+    /* 
+     * grid-column: 7 / 8;
+     * grid-row: 1 / 10;
+    */
+    grid-column: 7;
+    grid-row: 1 / span 9;
+    background: orange;
+  }
+
+  .c {
+    /* 
+     * grid-column: 1 / 2;
+     * grid-row: 3 / 4;
+    */
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .d {
+    grid-column: 3;
+    grid-row: 3;
+  }
+
+  .e {
+    grid-column: 5;
+    grid-row: 3;
+  }
+
+  .f {
+    grid-column: 1 / span 3;
+    grid-row: 5;
+  }
+
+  .g {
+    grid-column: 5;
+    grid-row: 5;
+  }
+
+  .h {
+    grid-column: 1;
+    grid-row: 7;
+  }
+
+  .i {
+    grid-column: 3 / span 3;
+    grid-row: 7;
+  }
+
+  .j {
+    grid-column: 1 / span 5;
+    grid-row: 9;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+    <div class="box c">C</div>
+    <div class="box d">D</div>
+    <div class="box e">E</div>
+    <div class="box f">F</div>
+    <div class="box g">G</div>
+    <div class="box h">H</div>
+    <div class="box i">I</div>
+    <div class="box j">J</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+//array.pop()：移除array中最后一个元素并返回该元素，如果array为empty，返回undefined。pop和push方法使得array可以像堆栈(stack)一样工作。
+$ a : ["a", "b", "c"]
+$ c : a.pop()
+//a = ["a", "b"], c = "c"

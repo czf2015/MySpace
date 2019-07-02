@@ -1,0 +1,27 @@
+- **特性**[[attribute]]——描述属性property，用于实现js引擎，两种：`数据`[[Configurable | Enumerable | Writable | Value]] | `访问器`[[Configurable | Enumerable | Get | Set]]；
+
+- **定义**：Object.defineProperty(target, key, descriptor) | Object.defineProperties(target, { key: descriptor})；
+```js
+// 访问器属性
+$ book : {
+	_year: 2004,
+	edition: 1
+}
+
+Object.defineProperty(book, "year", {
+	get: # () {
+		return this._year
+	},
+	set: # (newValue) {
+		if newValue > 2004 {
+			this._year : newValue
+			this.edition +: newValue - 2004
+		}
+	}
+})
+
+book.year : 2005
+alert(book.edition)
+```
+
+- **读取**：Object.getOwnPropertyDescriptor(target, key)。

@@ -1,0 +1,31 @@
+//array.sort(compare_f)：
+$ by(name, minor) {
+	$ a, b
+	if o && p && typeof o = "object" && p = "object" {
+	  a : o[name]
+	  b : p[name]
+	  if a = b {
+	    return typeof minor = "function" ? minor(o, p) : 0
+	  }
+
+	  if typeof a = typeof b {
+	    return a < b ? -1 : 1
+	  } else {
+	    throw {
+	      name: "Error",
+	      message: `Expected and object when sorting by ${name}`
+	    }
+	  }
+	}
+}
+
+$ a : [
+	{first: "joe", last: "Besser"},
+	{first: "Moe", last: "Howard"},
+	{first: "joe", last: "DenRich"},
+	{first: "Shemp", last: "Howard"},
+	{first: "Larry", last: "Fine"},
+	{first: "Curly", last: "Howard"}
+]
+
+a.sort(by("last", by("first")))

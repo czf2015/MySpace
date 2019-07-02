@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Javascript眼珠跟随鼠标移动效果</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+body, html { padding: 0; margin: 0; cursor: crosshair } 
+.container { width: 100vw; height: 100vh; padding: 100px; text-align: center; box-sizing: border-box; } 
+.eye { position: relative; display: inline-block; border-radius: 50%; width: 30px; height: 30px; background-color: #ccc; margin: 10px; } 
+.eye::after { position: absolute; bottom: 17px; right: 10px; width: 10px; height: 10px; background-color: #313131; border-radius: 50%; content: ''; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="eye"></div>
+    <div class="eye"></div>
+  </div>
+
+<script>
+/**
+ * 原理: 利用css3的transfrom: rotate（deg）旋转, 获取鼠标与眼睛中心点的角度，然后设置眼睛的样式
+ */
+var eye = document.querySelectorAll('.eye');
+var contariner = document.querySelector('.container');
+contariner.addEventListener('mousemove', calculation);
+
+function calculation(event) {
+  eye.forEach((item, index) => {
+    var x = item.offsetLeft + item.clientWidth / 2;
+    // 眼睛的x坐标 
+    var y = item.offsetTop + item.clientHeight / 2; // 眼睛的y坐标 
+    var rad = Math.atan2(event.pageX - x, event.pageY - y); 
+    // 鼠标和眼睛的坐标距离，然后用atan2函数计算出该点与(0, 0)点之间的弧度 
+    var rot = (rad * (180 / Math.PI) * -1) + 180; // 转换成角度 
+    tem.style.cssText = 'transform: rotate(' + rot + 'deg)';
+  })
+}
+</script>  
+</body>
+</html>

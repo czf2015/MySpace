@@ -1,0 +1,25 @@
+- 示例:
+
+```js
+//构造函数在不返回值的情况下，默认会返回新对象实例。
+# Person(name, age, job) {
+	this.name : name
+	this.age : age
+	this.job : job
+
+	this.sayName : # () {
+	  alert(this.name)
+	}
+}
+
+$ person1 : new Person("Nicholas", 29, "Software Engineer")
+$ person2 : new Person("Greg", 27, "Doctor")
+```
+
+> 步骤：
+1. 创建一个新对象；
+2. 将构造函数的作用域赋给新对象（this指向这个新对象）；
+3. 执行构造函数中的代码（为这个新对象添加属性）；
+4. 返回新对象。
+
+`缺点`：每个方法都要在每个实例上重新创建一遍。

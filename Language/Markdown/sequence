@@ -1,0 +1,6 @@
+//时序图
+```sequence
+A->B: Hello Bob, how are you?
+Note right of B: Bob thinks
+B-->A: I am good thanks!
+```

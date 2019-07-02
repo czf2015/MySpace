@@ -1,0 +1,75 @@
+1.控制序列：可以作为命令，以“\”开头，必须参数{}和可选参数[]。
+
+2.环境：以“bengin 环境名”开始，并以“end 环境名”结束。
+
+3.LATEX可以排版公式与文字，分为：**数学模式和文本模式**。如果你想要在公式中排版普通的文本（直立字体和普通字距），那么你必须要把这些文本放在\textrm{...} 命令中。
+
+4.在数学模式中又分为两种，一种是公式排版在一个段落之中；另一种是公式独立形式排版。前一种，公式直接放在文字之间，公式高度一般受文本高度限制；后一种，公式另起一行，高度可调整。处于**段内**的数学文本要放在\( 与\) 之间， $ 与$ 之间，或者`\begin{math} 与 \end{math}`之间；处于**段外**的数学文本放在\[ 与\] 之间，`$$ 与 $$`之间，或者`\begin{displaymath} 与 \end{displaymath} `之间。可以创建行内公式，例如 $\Gamma(n) = (n-1)! \quad \forall n \in \mathbb N$；或者块级公式：
+$$x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+
+- 定界符
+$($   $)$    $[$    $]$   $\{$    $\}$    $|$    $\|$   
+$$\left( \sum_{k = \frac{1}{2}}^{N^2} \frac{1}{k} \right)$$
+
+- 矩阵
+$$\begin{matrix}1 & 2\\3 & 4\end{matrix}$$
+$$\begin{pmatrix}1 & 2\\3 & 4\end{pmatrix}$$
+$$\begin{bmatrix}1 & 2\\3 & 4\end{bmatrix}$$
+$$\begin{Bmatrix}1 & 2\\3 & 4\end{Bmatrix}$$
+$$\begin{vmatrix}1 & 2\\3 & 4\end{vmatrix}$$
+$$\begin{Vmatrix}1 & 2\\3 & 4\end{Vmatrix}$$
+
+- 数组：当矩阵规模超过 10 列，或者上述矩阵类型不敷需求，可使用 array 环境。该环境可把一些元素排列成横竖都对齐的矩形阵列。\mathbf大写控制符，`\\表示换行`，{ccc}表示列样式
+
+$$
+\mathbf{X} =
+\left( \begin{array}{ccc}
+x_{11} & x_{12} & \ldots\\
+x_{21} & x_{22} & \ldots\\
+\vdots & \vdots & \ddots
+\end{array} \right)
+$$
+
+$$
+y = \left\{ \begin{array}{ll}
+a & \textrm{if $d > c$}\\
+b+x & \textrm{in the morning}\\
+l & \textrm{all day long}
+\end{array} \right.
+$$
+
+$$
+\left( \begin{array}{c|c}
+1 & 2 \\
+\hline
+3 & 4
+\end{array} \right)
+$$
+
+
+1. $\S$
+
+2. $\forall \exists \nexists \sqcup \sqcap \lor \land \bot \top \angle \measuredangle$
+
+3. $\emptyset \subset \Subset  \cup \cap$
+
+4. $\sum \prod \amalg \int \oint \partial \times \div \infty$
+
+5. $\dots \cdots \vdots \ddots  \centerdot \dotplus$
+
+6. $\uparrow \Uparrow  \nearrow \Updownarrow \longleftarrow \hookleftarrow \rightleftharpoons \iff$ 
+
+7. $\multimap \mapsto \leadsto \dashleftarrow \leftarrowtail \twoheadleftarrow \Lleftarrow$ 
+   $\Lsh \curvearrowleft \circlearrowleft \looparrowleft$
+
+8. $\star \ast \square \dimond \bullet \heartsuit \clubsuit \spadesuit$
+   $\ltimes \intercal \curlyvee \curlywedge \leftthreetimes$
+     $\wr \ddagger \| \rceil \lfloor \rangle \backslash \ulcorner$
+
+9. $\uplus$ 
+   $\odot \oplus \ominus \otimes \oslash$ 
+   $\circ \circledcirc \circledast \circledS$ 
+   $\boxminus \boxdot$
+   $\triangle \triangleleft \lhd \unlhd$
+
+10. $\dot{a} \ddot{a} \bar{a} \tilde{a} \breve{a} \hat{a} \check{a} \grave{a} \acute{a} \vec{a}$

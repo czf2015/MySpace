@@ -1,0 +1,20 @@
+/*参照go语法，包中元素只有首字母大写时才能导出，
+* go 语言中数组、slice、map中的元素均为相同类型，且通过[]访问，而struct通过.访问；
+* js中的对象是属性的容器，属性名可以是保护空字符串在内的任意字符串，
+* 属性值可以是除undefined值之外的任何值，数组为奇异对象。
+*/
+
+package/module/export/include/require/import/from/as 
+
+define/declare main return async/defer/await/yield
+
+if/else/elif switch/select/case/default 
+for/in/break/continue goto throw/try/catch/finally 
+
+function/var/const/enum/error/date/{key: value}hash/{item}set
+public/private/protect/static/class/extends/inherits/proto/super instance/type/of
+
+\u b/o/x byte/rune/int8/uint8/float32/…/buffer new/delete
+nil/bool/number/char/string/array/struct/interface/make
+
+excludes alias as includes to 

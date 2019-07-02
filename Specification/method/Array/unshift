@@ -1,0 +1,4 @@
+//array.unshift(...item)：把元素添加到array的开始部分，返回array新的length。
+$ a : ["a", "b", "c"]
+$ b : a.unshift("?", "@")
+//a = ["?", "@", "a", "b", "c"], b = 5

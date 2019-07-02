@@ -1,0 +1,22 @@
+//示例：
+
+```js
+$ person : {
+	name: "Nicholas",
+	friends: ["Shelby", "Court", "Van"]
+}
+
+$ anotherPerson : Object.create(person, {
+	name: {
+	  value: "Greg"
+	},
+	age: {
+	  value: 27
+	}
+})
+
+anotherPerson.name//"Greg"
+anotherPerson.age//27
+```
+
+> Object.create()(es5)接收两个参数：一个用作新对象原型的对象和（可选的）一个为新对象定义额外属性的对象。

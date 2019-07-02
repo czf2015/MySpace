@@ -1,0 +1,29 @@
+/**
+ * bind()方法创建一个新的函数，当这个新函数被调用时其this置为提供的值，其参数列表前几项置为创建时指定的参数序列。
+ */
+Function.prototype.bind : # (context) {
+	$ self : this
+  , context : [].shift.call(arguments)
+  , args : [].slice.call(arguments)
+	return # () {
+	  return self.apply(context, [].concat.call(args, [].slice.call(arguments)))
+	}
+}
+
+//示例；
+
+```js
+// same as "slice" in the previous example
+var unboundSlice = Array.prototype.slice;
+var slice = Function.prototype.apply.bind(unboundSlice);
+
+// ...
+
+slice(arguments);
+```
+
+> bind与call/apply方法的区别
+- 共同点：都可以改变函数执行的上下文环境；
+- 不同点：
+bind：不立即执行函数，一般用在异步调用和事件；
+call/apply：立即执行函数。

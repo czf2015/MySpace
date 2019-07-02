@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>条件选择符</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://www.css88.com/book/css/skin/article.css">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <section id="bd">
+  <section id="syntax" class="g-mod g-attr">
+    <h2 class="tit">语法：</h2>
+    <div class="cont">
+      <code><xmp><!--[if <keywords>? IE <version>?]>
+HTML代码块
+<![endif]--></xmp></code>
+    </div>
+  </section>
+  <section class="g-mod g-attr" id="value">
+    <h2 class="tit">取值：</h2>
+    <div class="cont">
+      <strong class="g-color-light">&lt;keywords&gt;</strong>
+      <p>if条件共包含6种选择方式：是否、大于、大于或等于、小于、小于或等于、非指定版本</p>
+      <dl>
+        <dt>是否：</dt>
+        <dd>指定是否IE或IE某个版本。关键字：<em class="g-color-light">空</em></dd>
+        <dt>大于：</dt>
+        <dd>选择大于指定版本的IE版本。关键字：<em class="g-color-light">gt</em>（greater than）</dd>
+        <dt>大于或等于：</dt>
+        <dd>选择大于或等于指定版本的IE版本。关键字：<em class="g-color-light">gte</em>（greater than or equal）</dd>
+        <dt>小于：</dt>
+        <dd>选择小于指定版本的IE版本。关键字：<em class="g-color-light">lt</em>（less than）</dd>
+        <dt>小于或等于：</dt>
+        <dd>选择小于或等于指定版本的IE版本。关键字：<em class="g-color-light">lte</em>（less than or equal）</dd>
+        <dt>非指定版本：</dt>
+        <dd>选择除指定版本外的所有IE版本。关键字：<em class="g-color-light">!</em></dd>
+      </dl>
+      <strong class="g-color-light">&lt;version&gt;</strong>
+      <p>目前的常用IE版本为6.0及以上，推荐酌情忽略低版本，把精力花在为使用高级浏览器的用户提供更好的体验上</p>
+      <p class="g-color-light">IE10及以上版本已将条件注释特性移除，使用时需注意。</p>
+    </div>
+  </section>
+  <section id="intro" class="g-mod g-attr">
+    <h2 class="tit">说明：</h2>
+    <div class="cont">
+      <strong>用于选择IE浏览器及IE的不同版本</strong>
+      <ul>
+        <li>if条件Hack是HTML级别的（包含但不仅是CSS的Hack，可以选择任何HTML代码块）</li>
+        <li class="gquote">
+          <p class="gquote-tit"><strong>如不想在非IE中看到某区域，可这样写：</strong></p>
+          <blockquote class="gquote-cont"><pre><code>&lt;!--[if IE]&gt;
+&lt;p&gt;你在非IE中将看不到我的身影&lt;/p&gt;
+&lt;![endif]--&gt;</code></pre></blockquote>
+          <p class="gquote-info">上述p代码块，将只在IE中可见。</p>
+        </li>
+        <li>if条件6种选择方式的使用示例（下述代码中被条件注释包含的HTML代码块也可以是link标记）：</li>
+        <li class="gquote">
+          <p class="gquote-tit"><strong>是否，示例代码：</strong></p>
+          <blockquote class="gquote-cont"><pre><code>&lt;!--[if IE]&gt;
+&lt;style&gt;
+.test{color:red;}
+&lt;/style&gt;
+&lt;![endif]--&gt;</code></pre></blockquote>
+          <p class="gquote-info">在上述代码中，只有IE浏览，才能看到应用了test类的元素是红色文本。</p>
+        </li>
+        <li class="gquote">
+          <p class="gquote-tit"><strong>大于，示例代码：</strong></p>
+          <blockquote class="gquote-cont"><pre><code>&lt;!--[if gt IE 6]&gt;
+&lt;style&gt;
+.test{color:red;}
+&lt;/style&gt;
+&lt;![endif]--&gt;</code></pre></blockquote>
+          <p class="gquote-info">在上述代码中，只有IE6以上，才能看到应用了test类的元素是红色文本。</p>
+        </li>
+        <li class="gquote">
+          <p class="gquote-tit"><strong>大于或等于，示例代码：</strong></p>
+          <blockquote class="gquote-cont"><pre><code>&lt;!--[if gte IE 6]&gt;
+&lt;style&gt;
+.test{color:red;}
+&lt;/style&gt;
+&lt;![endif]--&gt;</code></pre></blockquote>
+          <p class="gquote-info">在上述代码中，只有IE6以上（含IE6），才能看到应用了test类的元素是红色文本。</p>
+        </li>
+        <li class="gquote">
+          <p class="gquote-tit"><strong>小于，示例代码：</strong></p>
+          <blockquote class="gquote-cont"><pre><code>&lt;!--[if lt IE 7]&gt;
+&lt;style&gt;
+.test{color:red;}
+&lt;/style&gt;
+&lt;![endif]--&gt;</code></pre></blockquote>
+          <p class="gquote-info">在上述代码中，只有IE7以下，才能看到应用了test类的元素是红色文本。</p>
+        </li>
+        <li class="gquote">
+          <p class="gquote-tit"><strong>小于或等于，示例代码：</strong></p>
+          <blockquote class="gquote-cont"><pre><code>&lt;!--[if lte IE 7]&gt;
+&lt;style&gt;
+.test{color:red;}
+&lt;/style&gt;
+&lt;![endif]--&gt;</code></pre></blockquote>
+          <p class="gquote-info">在上述代码中，只有IE7以下（含IE7），才能看到应用了test类的元素是红色文本。</p>
+        </li>
+        <li class="gquote">
+          <p class="gquote-tit"><strong>非指定版本，示例代码：</strong></p>
+          <blockquote class="gquote-cont"><pre><code>&lt;!--[if ! IE 7]&gt;
+&lt;style&gt;
+.test{color:red;}
+&lt;/style&gt;
+&lt;![endif]--&gt;</code></pre></blockquote>
+          <p class="gquote-info">在上述代码中，除IE7以外的IE版本，都能看到应用了test类的元素是红色文本。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="example" class="g-mod g-attr">
+    <h2 class="tit">示例：</h2>
+    <div class="cont">
+      <textarea cols="90" rows="10">&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-cmn-Hans"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8" /&gt;
+&lt;title&gt;if条件Hack_CSS参考手册_web前端开发参考手册系列&lt;/title&gt;
+&lt;meta name="author" content="Joy Du(飘零雾雨), dooyoe@gmail.com, www.doyoe.com" /&gt;
+&lt;style&gt;
+h1{margin:10px 0;font-size:16px;}
+span{display:none;}
+.not-ie{display:inline;}
+&lt;/style&gt;
+&lt;!--[if IE]&gt;
+&lt;style&gt;
+.ie{display:inline;}
+.not-ie{display:none;}
+&lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;!--[if IE 5]&gt;
+&lt;style&gt;
+.ie5{display:inline;}
+&lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;!--[if IE 6]&gt;
+&lt;style&gt;
+.ie6{display:inline;}
+&lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;!--[if IE 7]&gt;
+&lt;style&gt;
+.ie7{display:inline;}
+&lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;!--[if IE 8]&gt;
+&lt;style&gt;
+.ie8{display:inline;}
+&lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;!--[if IE 9]&gt;
+&lt;style&gt;
+.ie9{display:inline;}
+&lt;/style&gt;
+&lt;![endif]--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;
+  您正在使用
+  &lt;span class="not-ie"&gt;非IE&lt;/span&gt;
+  &lt;span class="ie"&gt;IE&lt;/span&gt;
+  &lt;span class="ie5"&gt;5&lt;/span&gt;
+  &lt;span class="ie6"&gt;6&lt;/span&gt;
+  &lt;span class="ie7"&gt;7&lt;/span&gt;
+  &lt;span class="ie8"&gt;8&lt;/span&gt;
+  &lt;span class="ie9"&gt;9&lt;/span&gt;
+  浏览器
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </textarea>
+      <p><input type="button" value="运行" class="g-btn g-btn-sure"><input type="button" class="g-btn g-btn-copy" value="复制"></p>
+    </div>
+  </section>
+</section>
+</body>
+</html>

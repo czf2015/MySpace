@@ -1,0 +1,10 @@
+//流程图
+```flow
+s=>start
+o=>operation: My Operation
+c=>condition: Yes or No?
+e=>end
+s->o->c
+c(yes)->e
+c(no)->o
+```

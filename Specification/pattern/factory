@@ -1,0 +1,22 @@
+- 示例:
+
+```js
+# createPerson(name, age, job) {
+	$ o : new Object()
+	
+	o.name : name
+	o.age : age
+	o.job : job
+
+	o.sayName : # () {
+	  alert(this.name)
+	}
+
+	return o
+}
+
+$ person1 : createPerson("Nicholas", 29, "Software Engineer")
+$ person2 : createPerson("Greg", 27, "Doctor")
+```
+
+`缺点`：没有解决对象识别的问题。

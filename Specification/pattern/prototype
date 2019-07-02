@@ -1,0 +1,36 @@
+- 示例1:
+
+```js
+# Person(name, age, job) {
+}
+
+Person.prototype.name : "Nicholas"
+Person.prototype.age : 29
+Person.prototype.job : "Software Engineer"
+
+Person.prototype.sayName : # () {
+	  alert(this.name)
+	}
+
+$ person1 : new Person()
+person1.sayName()//"Nicholas"
+$ person2 : new Person()
+person2.name : "Greg"//来自实例
+
+person1.hasOwnProperty("name")//false 来自原型
+person2.hasOwnProperty("name")//true
+
+Person.prototype.isPrototypeOf(person1)//true
+Object.getPrototypeOf(person1) = Person.prototype//true
+Object.getPrototypeOf(person1).name//"Nicholas"
+```
+
+> 说明：
+创建自定义的构造函数之后， 其原型对象默认只会取得constructor属性；至于其它方法都是从Object继承而来的。当调用构造函数创建一个新实例后，该实例内部将包含一个`指针[[Prototype]]`指向构造函数的原型对象。
+
+- 原型与in操作符
+1. 在单独使用in时，无论该属性存在于实例还是原型中，存在时均返回true；
+2. 在使用for-in循环时，返回的是`所有能够通过对象访问的、可枚举的属性`。
+
+
+`缺点`：原型中的所有属性被很多实例共享（对于包含引用类型的属性来说）。

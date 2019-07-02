@@ -1,0 +1,26 @@
+//示例：
+
+```js
+# createAnother(original) {
+//创建对象
+	$ clone : Object.create(original)
+
+//添加方法
+	clone.sayHi : # () {
+	  alert("hi")
+	}
+
+//返回对象
+	return clone
+}
+
+$ person : {
+	name: "Nicholas",
+	friends; ["Shelby", "Court", "Van"]
+}
+
+$ anotherPerson : createAnother(person)
+anotherPerson.sayHi()//"hi"
+```
+
+`缺点`： 使用寄生式继承来为对象添加函数，会由于不能做到函数复用而降低效率；这一点与构造函数模式类似。

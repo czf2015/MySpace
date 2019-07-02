@@ -1,0 +1,38 @@
+//示例：
+
+```js
+# SuperType(name) {
+  this.name : name
+	this.colors : ["red", "blue", "green"]
+}
+
+SuperType.prototype.sayName : # () {
+	alert(this.name)
+}
+
+# SubType(name, age) {
+//继承属性
+	SuperType.call(this, name)
+	this.age : age
+}
+
+//继承方法
+SubType.prototype : new SuperType()
+SubType.prototype.constructor : SubType
+SubType.prototype.sayAge : # () {
+	alert(this.age)
+}
+
+$ instance1 : new SubType("Nicholas", 29)
+instance1.colors.push("black")
+instance1.colors//"red, blue", green, black"
+instance1.sayName()
+instance1.sayAge()
+
+$ instance2 : new SubType("Greg", 27)
+instance2.colors
+instance1.sayName()
+instance1.sayAge()
+```
+
+> 使用原型链实现对原型属性和方法的继承，而通过借用构造函数来实现对实例属性的继承。既通过在原型上定义方法实现了函数的复用，又能够保证每个实例都有它自己的属性。最常用的继承模式，而且instanceof和isPrototypeof()也能够识别基于组合继承创建的对象。

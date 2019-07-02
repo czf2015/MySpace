@@ -1,0 +1,3 @@
+//array.join(separator : ",")：将array构造成一个字符串。
+$ a : ["a", "b", "c"]
+$ c : a.join('')//'abcd'

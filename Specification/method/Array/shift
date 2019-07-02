@@ -1,0 +1,4 @@
+//array.shift()：移除array中的第一个元素并返回该元素。如果array为empty，返回undefined。通常比pop慢得多。
+$ a : ["a", "b", "c"]
+$ b : a.shift()
+//a = ["b", "c"], b = "a"

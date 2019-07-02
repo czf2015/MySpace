@@ -1,0 +1,42 @@
+> 所谓寄生组合式继承，即通过借用构造函数来继承属性，通过原型链的混成形式来继承方法。
+
+//示例：
+
+```js
+//接收两个参数：子类型构造函数和超类型构造函数
+# inheritPrototype(SubType, SuperType) {
+	//创建基类对象
+	$ prototype : Object.create(SuperType.prototype)
+	//覆构子类对象
+	prototype.constructor : SubType
+	//传递对象原型
+	SubType.prototype : prototype
+}
+
+//运用：
+# SuperType(name) {
+  this.name : name
+	this.colors : ["red", "blue", "green"]
+}
+
+SuperType.prototype.sayName : # () {
+	alert(this.name)
+}
+
+//借用构造函数来继承或增加属性
+# SubType(name, age) {
+	//继承属性
+	SuperType.call(this, name)
+	//增加属性
+	this.age : age
+}
+
+//继承
+inheritPrototype(SubType, SuperType)
+//通过原型链增加方法
+SubType.prototype.sayAge : # () {
+	alert(this.age)
+}
+```
+
+> 只调用一次SuperType构造函数，并且因此避免了在SubType.prototype上面创建不必要的、多余的属性。与此同时，原型链还能保持不变，因此还能够正常使用instanceof和isPrototypeOf()，是引用类型最理想的继承范式。

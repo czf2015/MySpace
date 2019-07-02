@@ -1,0 +1,31 @@
+/**最佳实践：默认使用const，只在确实需要改变变量的值时使用let。因为大部分变量的值在初始化后不应再改变，而预料外的变量值的改变是很多bug的源头。*/
+// array
+$ fs : []
+
+for $ i : 0; i < 10; i++ {   
+  fs.push(() => {     
+    console.log(i)   
+  }) 
+}
+
+fs.each((f) => {
+  f()
+})
+
+// object
+$ fs : []
+  o : {
+    a: true,
+    b: true,
+    c: true
+  }
+
+for @ k in o {
+  fs.push(() => {
+    console.log(k)
+  })
+}
+
+fs.each((f) => {
+  f()
+})
