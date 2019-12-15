@@ -1,0 +1,1 @@
+[半小时入门 Angular](https://github.com/lizhonghui/blog/issues/14)
